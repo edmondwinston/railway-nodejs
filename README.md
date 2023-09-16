@@ -20,10 +20,14 @@ This service has the following endpoints:
 - _`/api/v1/account`_: protected resource. Will give you user data if authenticated.
 - _`/api/v1/account/authenticate`_: where you would log in. Any email+password would work.
 
+And the following views:
+
+- _`/`_: the root view.
+- _`/login`_: the login view.
+
 Besides, in case you are almost there understanding, after having successfully logged in, the below cookie will be attached to every request to the service, and it is this cookie that acts as a key to open `Passport.js` door to the protected resources sitting behind it.
 
 ![image](https://github.com/edmondwinston/railway-nodejs/assets/132081506/e13af1a8-038c-46d9-8f64-34c6c7e168ec)
-
 
 ## Architecture notes
 
