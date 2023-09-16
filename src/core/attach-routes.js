@@ -19,8 +19,13 @@ export function attachRoutes(app) {
     return res.status(200).json({message: "Service is healthy."});
   });
 
+
   app.get("/", (_, res) => {
-    return res.status(200).json({message: "Welcome to the service. This is the root path."});
+    return res.render("root.ejs");
+  });
+
+  app.get("/login", (_, res) => {
+    return res.render("login.ejs");
   });
 
 }

@@ -6,6 +6,7 @@ import passport from "passport";
 import LocalStrategy from "passport-local";
 
 import {errorCatcher} from "../middlewares/index.js";
+import {viewsDir} from "../views/index.js";
 
 /**
  * 
@@ -15,6 +16,10 @@ export function attachMiddlewares(app) {
 
   app.use(express.json());
   app.use(express.urlencoded({extended: true}));
+
+  console.log("viewsDir", viewsDir);
+  app.set("views", viewsDir);
+  app.set("view engine", "ejs");
 
   // Helmet helps secure the service by setting various HTTP headers.
   // @see https://helmetjs.github.io/
